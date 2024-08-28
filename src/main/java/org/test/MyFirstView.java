@@ -4,13 +4,18 @@ import com.vaadin.ui.*;
 
 public class MyFirstView extends MyParentView {
 
+    private final GridLayout gridLayout = new GridLayout();
+
     public MyFirstView() {
         // FIXME:
         // The following line results in this after migration:
         // ((HasStyle) setClassName()).setStyleName("MyFirstView");
         setStyleName("MyFirstView");
 
-        GridLayout gridLayout = new GridLayout();
+        // FIXME:
+        // The result of the following is:
+        // gridLayout.setComponentAlignment(new Html("<span>" + "label" + "</span>"), FlexComponent.Alignment.BOTTOM_CENTER);
+        // FlexComponent.Alignment.BOTTOM_CENTER is not defined in Flow
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_CENTER);
     }
 
