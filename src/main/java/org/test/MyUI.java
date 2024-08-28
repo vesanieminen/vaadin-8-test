@@ -43,4 +43,9 @@ public class MyUI extends UI {
         drinks.addItem("Quit Drinking", null, null);
     }
 
+    public MenuBar.Command test(MenuBar menuBar) {
+        return null;
+    }
+
+
 }
