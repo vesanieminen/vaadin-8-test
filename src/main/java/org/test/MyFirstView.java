@@ -18,6 +18,11 @@ public class MyFirstView extends MyParentView {
         // FlexComponent.Alignment.BOTTOM_CENTER is not defined in Flow
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_CENTER);
 
+        // FIXME:
+        // The result of this is:
+        //   final Html label = new Html("<span>" + "</span>");
+        //   label.addClassName("my-style");
+        // Html component in Flow does not have addClassName method
         final Label label = new Label();
         label.addStyleName("my-style");
     }
