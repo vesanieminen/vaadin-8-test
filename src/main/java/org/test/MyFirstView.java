@@ -5,6 +5,9 @@ import com.vaadin.ui.*;
 public class MyFirstView extends MyParentView {
 
     public MyFirstView() {
+        // FIXME:
+        // The following line results in this after migration:
+        // ((HasStyle) setClassName()).setStyleName("MyFirstView");
         setStyleName("MyFirstView");
     }
 
