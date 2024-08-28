@@ -17,6 +17,9 @@ public class MyFirstView extends MyParentView {
         // gridLayout.setComponentAlignment(new Html("<span>" + "label" + "</span>"), FlexComponent.Alignment.BOTTOM_CENTER);
         // FlexComponent.Alignment.BOTTOM_CENTER is not defined in Flow
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_CENTER);
+
+        final Label label = new Label();
+        label.addStyleName("my-style");
     }
 
     @Override

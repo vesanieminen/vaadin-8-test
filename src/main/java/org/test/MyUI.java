@@ -18,6 +18,14 @@ public class MyUI extends UI {
         final TextField name = new TextField();
         name.setCaption("Type your name here:");
 
+        final Button button = addButton(layout, name);
+
+        layout.addComponents(name, button);
+
+        setContent(layout);
+    }
+
+    private static Button addButton(VerticalLayout layout, TextField name) {
         Button button = new Button("Click Me");
         // FIXME:
         // The following line is kept the same:
@@ -26,12 +34,7 @@ public class MyUI extends UI {
         button.addClickListener((Button.ClickListener) e -> {
             layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
         });
-
-        layout.addComponents(name, button);
-
-
-        setContent(layout);
-
+        return button;
     }
 
 }
