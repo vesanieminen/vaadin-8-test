@@ -19,6 +19,10 @@ public class MyUI extends UI {
         name.setCaption("Type your name here:");
 
         Button button = new Button("Click Me");
+        // FIXME:
+        // The following line is kept the same:
+        //      button.addClickListener((Button.ClickListener) e -> {
+        // The problem is that Flow doesn't have Button.ClickListener but rather ComponentEventListener
         button.addClickListener((Button.ClickListener) e -> {
             layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
         });
