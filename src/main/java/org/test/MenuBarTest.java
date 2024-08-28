@@ -1,7 +1,6 @@
 package org.test;
 
-import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.MenuBar;
+import com.vaadin.ui.*;
 
 public abstract class MenuBarTest extends CustomComponent {
 

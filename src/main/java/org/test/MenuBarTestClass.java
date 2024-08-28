@@ -1,6 +1,6 @@
 package org.test;
 
-import com.vaadin.ui.MenuBar;
+import com.vaadin.ui.*;
 
 public class MenuBarTestClass extends MenuBarTest {
     @Override
