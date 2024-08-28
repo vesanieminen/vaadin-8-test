@@ -5,6 +5,7 @@ import com.vaadin.ui.*;
 public class MyFirstView extends MyParentView {
 
     private final GridLayout gridLayout = new GridLayout();
+    private final Grid grid = new Grid<>();
 
     public MyFirstView() {
         // FIXME:
@@ -25,6 +26,8 @@ public class MyFirstView extends MyParentView {
         // Html component in Flow does not have addClassName method
         final Label label = new Label();
         label.addStyleName("my-style");
+
+        grid.addColumn("foo").setWidth(100);
     }
 
     @Override
