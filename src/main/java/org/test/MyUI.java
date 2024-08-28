@@ -28,24 +28,9 @@ public class MyUI extends UI {
 
         layout.addComponents(name, button);
 
-        addMenuBar(layout);
 
         setContent(layout);
 
     }
-
-    private static void addMenuBar(VerticalLayout layout) {
-        MenuBar barmenu = new MenuBar();
-        layout.addComponent(barmenu);
-
-        MenuBar.MenuItem drinks = barmenu.addItem("Beverages", null, null);
-        drinks.addSeparator();
-        drinks.addItem("Quit Drinking", null, null);
-    }
-
-    public MenuBar.Command test(MenuBar menuBar) {
-        return null;
-    }
-
 
 }
