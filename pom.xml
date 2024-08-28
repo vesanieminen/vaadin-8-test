@@ -26,7 +26,7 @@
 	<repositories>
 		<repository>
 			<id>vaadin-addons</id>
-			<url>http://maven.vaadin.com/vaadin-addons</url>
+			<url>https://maven.vaadin.com/vaadin-addons</url>
 		</repository>
 	</repositories>
 
@@ -64,6 +64,11 @@
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-themes</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.vaadin</groupId>
+			<artifactId>viritin</artifactId>
+			<version>2.12</version>
 		</dependency>
 	</dependencies>
 
