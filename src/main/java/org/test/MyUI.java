@@ -7,6 +7,14 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.flow.component.HasLabel;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.featurepack.util.V8Utils;
+import com.vaadin.flow.component.Html;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.server.VaadinRequest;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.textfield.TextField;
 
 @Theme("mytheme")
 public class MyUI extends UI {
@@ -16,13 +24,15 @@ public class MyUI extends UI {
         final VerticalLayout layout = new VerticalLayout();
 
         final TextField name = new TextField();
-        name.setCaption("Type your name here:");
+        if (name instanceof HasLabel) {
+			((HasLabel) name).setLabel("Type your name here:");
+		}
 
         final Button button = addButton(layout, name);
 
-        layout.addComponents(name, button);
+        layout.add(name, button);
 
-        setContent(layout);
+        V8Utils.setContent(this, layout);
     }
 
     private static Button addButton(VerticalLayout layout, TextField name) {
@@ -32,7 +42,7 @@ public class MyUI extends UI {
         //      button.addClickListener((Button.ClickListener) e -> {
         // The problem is that Flow doesn't have Button.ClickListener but rather ComponentEventListener
         button.addClickListener((Button.ClickListener) e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
+            layout.add(new Html("Thanks " + name.getValue() + ", it works!"));
         });
         return button;
     }
