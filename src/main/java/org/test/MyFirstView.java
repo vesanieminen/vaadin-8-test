@@ -17,7 +17,15 @@ public class MyFirstView extends MyParentView {
         // The result of the following is:
         // gridLayout.setComponentAlignment(new Html("<span>" + "label" + "</span>"), FlexComponent.Alignment.BOTTOM_CENTER);
         // FlexComponent.Alignment.BOTTOM_CENTER is not defined in Flow
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_LEFT);
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_CENTER);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_RIGHT);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.MIDDLE_LEFT);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.MIDDLE_CENTER);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.MIDDLE_RIGHT);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.TOP_LEFT);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.TOP_CENTER);
+        gridLayout.setComponentAlignment(new Label("label"), Alignment.TOP_RIGHT);
 
         // FIXME:
         // The result of this is:
