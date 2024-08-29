@@ -16,7 +16,8 @@ public class MyFirstView extends MyParentView {
         // FIXME:
         // The result of the following is:
         // gridLayout.setComponentAlignment(new Html("<span>" + "label" + "</span>"), FlexComponent.Alignment.BOTTOM_LEFT);
-        // FlexComponent.Alignment does not have the following values defined in Flow
+        // FlexComponent.Alignment does not have the following values defined in Flow.
+        // Either AlignmentVisitor needs to be fixed or a featurepack developed.
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_LEFT);
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_CENTER);
         gridLayout.setComponentAlignment(new Label("label"), Alignment.BOTTOM_RIGHT);
